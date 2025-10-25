@@ -9,16 +9,16 @@ function Header() {
             <Navigation>
                 <ul>
                     <li>
-                        <a href="#home">Home</a>
+                        <a href="#home">Accueil</a>
                     </li>
                     <li>
-                        <a href="#about">About</a>
+                        <a href="#about">À propos</a>
                     </li>
                     <li>
-                        <a href="#skills">Skills</a>
+                        <a href="#skills">Compétences</a>
                     </li>
                     <li>
-                        <a href="#projects">Projects</a>
+                        <a href="#projects">Projets</a>
                     </li>
                     <li>
                         <a href="#contact">Contact</a>
@@ -35,9 +35,11 @@ const HeaderComponent = styled.header`
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
     box-sizing: border-box;
     width: 100%;
-    background: #f5f5f5;
+    background: #f5f5f5b3;
+    backdrop-filter: blur(10px);
     padding: 16px 32px;
     display: flex;
     justify-content: space-between;
