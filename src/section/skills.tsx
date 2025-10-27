@@ -1,0 +1,141 @@
+'use client';
+import styled from 'styled-components';
+
+function SkillsSection() {
+    return (
+        <Section>
+            <Title>Mes Compétences</Title>
+            <Description>
+                Une boîte à outils complète pour construire des applications web
+            </Description>
+            <SkillsGrid>
+                <SkillsCard>
+                    <SkillCardTitle>Front-End</SkillCardTitle>
+                    <TechTagContainer>
+                        <TechTag>HTML</TechTag>
+                        <TechTag>CSS</TechTag>
+                        <TechTag>JavaScript</TechTag>
+                        <TechTag>TypeScript</TechTag>
+                        <TechTag>React</TechTag>
+                        <TechTag>Next.js</TechTag>
+                        <TechTag>Styled Components</TechTag>
+                        <TechTag>Tailwind CSS</TechTag>
+                    </TechTagContainer>
+                </SkillsCard>
+                <SkillsCard>
+                    <SkillCardTitle>Back-end</SkillCardTitle>
+                    <TechTagContainer>
+                        <TechTag>Node.js</TechTag>
+                        <TechTag>Express</TechTag>
+                        <TechTag>Nest.js</TechTag>
+                        <TechTag>RESTful APIs</TechTag>
+                        <TechTag>GraphQL</TechTag>
+                        <TechTag>Firebase</TechTag>
+                        <TechTag>MySQL</TechTag>
+                        <TechTag>MongoDB</TechTag>
+                        <TechTag>PostgreSQL</TechTag>
+                    </TechTagContainer>
+                </SkillsCard>
+                <SkillsCard>
+                    <SkillCardTitle>Outils et autre</SkillCardTitle>
+                    <TechTagContainer>
+                        <TechTag>Git</TechTag>
+                        <TechTag>Github</TechTag>
+                        <TechTag>Docker</TechTag>
+                        <TechTag>Jest</TechTag>
+                        <TechTag>CI/CD</TechTag>
+                        <TechTag>AWS</TechTag>
+                        <TechTag>Figma</TechTag>
+                        <TechTag>Webpack</TechTag>
+                        <TechTag>Vercel</TechTag>
+                    </TechTagContainer>
+                </SkillsCard>
+            </SkillsGrid>
+        </Section>
+    );
+}
+
+export default SkillsSection;
+
+const Section = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    min-height: 60vh;
+    padding: 64px 16px;
+    box-sizing: border-box;
+
+    @media (max-width: 900px) {
+        width: 95%;
+    }
+`;
+
+const Title = styled.h2`
+    font-size: 2rem;
+    margin-bottom: 16px;
+    position: relative;
+    width: max-content;
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        margin-top: 8px;
+        height: 4px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, #6b7aff, #46e5d8);
+    }
+`;
+
+const Description = styled.p`
+    font-size: 1.2rem;
+    margin-bottom: 32px;
+    text-align: center;
+`;
+
+const SkillsGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    width: 100%;
+
+    @media (max-width: 900px) {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+`;
+
+const SkillsCard = styled.div`
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+`;
+
+const SkillCardTitle = styled.h3`
+    margin-bottom: 16px;
+
+    border-left: 4px solid #4f46e5;
+    padding-left: 8px;
+`;
+
+const TechTagContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`;
+const TechTag = styled.span`
+    background: #ec4899;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 4px;
+    font-size: 0.9rem;
+
+    &:hover {
+        background: linear-gradient(90deg, #6b7aff, #ec4899);
+    }
+`;
