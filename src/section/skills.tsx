@@ -1,4 +1,5 @@
 'use client';
+import { HeroSphere } from '@/components/section-sphere';
 import styled from 'styled-components';
 
 function SkillsSection() {
@@ -51,6 +52,14 @@ function SkillsSection() {
                     </TechTagContainer>
                 </SkillsCard>
             </SkillsGrid>
+
+            <HeroSphere color="#ffd1dc" size={220} top={60} left={40} />
+            <HeroSphere color="#bfe6ff" size={160} top={120} left={920} />
+            <HeroSphere color="#f7f3a7" size={300} top={200} left={320} />
+            <HeroSphere color="#d1ffd6" size={120} top={420} left={660} />
+            <HeroSphere color="#c8b6ff" size={260} top={520} left={140} />
+            <HeroSphere color="#ffdfb2" size={180} top={340} left={980} />
+            <HeroSphere color="#aee1ff" size={90} top={240} left={540} />
         </Section>
     );
 }
@@ -58,19 +67,12 @@ function SkillsSection() {
 export default SkillsSection;
 
 const Section = styled.section`
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    margin: auto;
-    min-height: 60vh;
-    padding: 64px 16px;
     box-sizing: border-box;
-
-    @media (max-width: 900px) {
-        width: 95%;
-    }
 `;
 
 const Title = styled.h2`
@@ -90,9 +92,11 @@ const Title = styled.h2`
 `;
 
 const Description = styled.p`
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 32px;
     text-align: center;
+    color: #a0a0a0;
+    font-weight: 100;
 `;
 
 const SkillsGrid = styled.div`
@@ -100,7 +104,7 @@ const SkillsGrid = styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
 
-    width: 100%;
+    width: 70%;
 
     @media (max-width: 900px) {
         width: 90%;
@@ -114,6 +118,8 @@ const SkillsCard = styled.div`
     box-sizing: border-box;
     border: 2px solid #e5e7eb;
     border-radius: 12px;
+    background-color: #ffffff55;
+    backdrop-filter: blur(10px);
 `;
 
 const SkillCardTitle = styled.h3`

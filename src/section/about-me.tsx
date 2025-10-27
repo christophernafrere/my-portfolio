@@ -67,7 +67,6 @@ const Section = styled.section`
     align-items: center;
     width: 100%;
     min-height: 80vh;
-    padding: 64px 16px;
     box-sizing: border-box;
 `;
 

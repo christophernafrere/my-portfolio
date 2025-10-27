@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Header from '@/layouts/header';
 import StyledComponentsRegistry from '@/lib/registery';
 import GlobalStyle from './global-styles';
+import Footer from '@/layouts/footer';
 
 export const metadata: Metadata = {
     title: 'Christopher Nafrere - Développeur Web',
@@ -51,6 +52,7 @@ export default function RootLayout({
                     <GlobalStyle />
                     <Header />
                     {children}
+                    <Footer />
                 </StyledComponentsRegistry>
             </body>
         </html>

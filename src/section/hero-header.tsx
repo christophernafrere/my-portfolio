@@ -1,5 +1,6 @@
 'use client';
 import Button from '@/components/button';
+import { HeroSphere } from '@/components/section-sphere';
 import { ArrowDown, GithubIcon, LinkedinIcon, MailIcon } from 'lucide-react';
 import styled from 'styled-components';
 
@@ -46,12 +47,27 @@ function HeroHeader() {
                     <MailIcon size={24} />
                 </a>
             </SocialContainer>
-
-            <HeroSphere color="#ffcccb" size={300} top={600} left={480} />
-            <HeroSphere color="#ffcccb" size={300} top={600} left={480} />
-            <HeroSphere color="#add8e6" size={400} top={200} left={200} />
-            <HeroSphere color="#eee690" size={500} top={300} left={800} />
-            <HeroSphere color="#90ee90" size={150} top={400} left={600} />
+            <div
+                style={{
+                    position: 'absolute',
+                    bottom: '45vh', // pousse les sphères bien au-dessus du bas
+                    left: 0,
+                    right: 0,
+                    height: '18vh',
+                    pointerEvents: 'none',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'flex-end',
+                    gap: 20,
+                    zIndex: 0,
+                    transform: 'translateY(-10px) scale(0.85)',
+                }}
+            >
+                <HeroSphere color="#ffcccb" size={140} top={20} left={160} />
+                <HeroSphere color="#add8e6" size={120} top={30} left={380} />
+                <HeroSphere color="#eee690" size={140} top={22} left={600} />
+                <HeroSphere color="#90ee90" size={100} top={35} left={820} />
+            </div>
         </HeroHeaderContainer>
     );
 }
@@ -61,7 +77,6 @@ export default HeroHeader;
 const HeroHeaderContainer = styled.section`
     width: 100%;
     height: 100vh;
-    overflow: hidden;
     z-index: 0;
     background-color: #ffffff;
     backdrop-filter: blur(10px);
@@ -70,23 +85,6 @@ const HeroHeaderContainer = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-`;
-
-const HeroSphere = styled.div<{
-    color?: string;
-    size?: number;
-    top?: number;
-    left?: number;
-}>`
-    position: absolute;
-    top: ${(props) => props.top ?? 0}px;
-    left: ${(props) => props.left ?? 0}px;
-    width: ${(props) => props.size ?? 450}px;
-    height: ${(props) => props.size ?? 450}px;
-    border-radius: 50%;
-    filter: blur(100px);
-    background: ${(props) => props.color ?? '#c1e1ff'};
-    z-index: -1;
 `;
 
 const HeroPhoto = styled.img`
