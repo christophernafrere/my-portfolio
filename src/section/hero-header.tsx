@@ -1,8 +1,9 @@
 'use client';
+import React, { useEffect, useState } from 'react';
 import Button from '@/components/button';
-import { HeroSphere } from '@/components/section-sphere';
 import { ArrowDown, GithubIcon, LinkedinIcon, MailIcon } from 'lucide-react';
 import styled from 'styled-components';
+import HeroSphereSystem from './hero-sphere';
 
 function HeroHeader() {
     return (
@@ -47,27 +48,8 @@ function HeroHeader() {
                     <MailIcon size={24} />
                 </a>
             </SocialContainer>
-            <div
-                style={{
-                    position: 'absolute',
-                    bottom: '45vh', // pousse les sphères bien au-dessus du bas
-                    left: 0,
-                    right: 0,
-                    height: '18vh',
-                    pointerEvents: 'none',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'flex-end',
-                    gap: 20,
-                    zIndex: 0,
-                    transform: 'translateY(-10px) scale(0.85)',
-                }}
-            >
-                <HeroSphere color="#ffcccb" size={140} top={20} left={160} />
-                <HeroSphere color="#add8e6" size={120} top={30} left={380} />
-                <HeroSphere color="#eee690" size={140} top={22} left={600} />
-                <HeroSphere color="#90ee90" size={100} top={35} left={820} />
-            </div>
+
+            <HeroSphereSystem />
         </HeroHeaderContainer>
     );
 }

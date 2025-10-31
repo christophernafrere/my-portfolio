@@ -1,6 +1,6 @@
 'use client';
-import { HeroSphere } from '@/components/section-sphere';
 import styled from 'styled-components';
+import HeroSphereSystem from './hero-sphere';
 
 function SkillsSection() {
     return (
@@ -53,13 +53,7 @@ function SkillsSection() {
                 </SkillsCard>
             </SkillsGrid>
 
-            <HeroSphere color="#ffd1dc" size={220} top={60} left={40} />
-            <HeroSphere color="#bfe6ff" size={160} top={120} left={920} />
-            <HeroSphere color="#f7f3a7" size={300} top={200} left={320} />
-            <HeroSphere color="#d1ffd6" size={120} top={420} left={660} />
-            <HeroSphere color="#c8b6ff" size={260} top={520} left={140} />
-            <HeroSphere color="#ffdfb2" size={180} top={340} left={980} />
-            <HeroSphere color="#aee1ff" size={90} top={240} left={540} />
+            <HeroSphereSystem />
         </Section>
     );
 }
@@ -73,6 +67,7 @@ const Section = styled.section`
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    z-index: 1000;
 `;
 
 const Title = styled.h2`

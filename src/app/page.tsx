@@ -2,6 +2,7 @@
 import AboutMe from '@/section/about-me';
 import GetInTouch from '@/section/contact';
 import HeroHeader from '@/section/hero-header';
+import ProjectsShowcase from '@/section/project';
 import SkillsSection from '@/section/skills';
 import styled from 'styled-components';
 
@@ -11,6 +12,7 @@ export default function Home() {
             <HeroHeader />
             <AboutMe />
             <SkillsSection />
+            <ProjectsShowcase />
             <GetInTouch />
         </Main>
     );

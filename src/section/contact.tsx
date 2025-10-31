@@ -88,6 +88,7 @@ const Section = styled.section`
     margin: auto;
     min-height: 50vh;
     box-sizing: border-box;
+    z-index: 1000;
     overflow: hidden;
 
     @media (max-width: 900px) {
