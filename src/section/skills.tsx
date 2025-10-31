@@ -115,6 +115,7 @@ const SkillsCard = styled.div`
     border-radius: 12px;
     background-color: #ffffff55;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 `;
 
 const SkillCardTitle = styled.h3`

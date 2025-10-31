@@ -62,6 +62,8 @@ const HeroHeaderContainer = styled.section`
     z-index: 0;
     background-color: #ffffff;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
     border-radius: 16px;
     display: flex;
     flex-direction: column;
