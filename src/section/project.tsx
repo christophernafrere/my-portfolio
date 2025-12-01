@@ -1,15 +1,32 @@
 'use client';
 import styled from 'styled-components';
 import HeroSphereSystem from './hero-sphere';
+import ProjectCard from '@/components/project-card';
 
 function ProjectsShowcase() {
+    const projectsList = [
+        { 
+            title:"BJ Multi Renov", 
+            url:"https://www.bjmultirenov.fr", 
+            imageUrl: "/images/project/bj-multi-renov.png" ,
+            tech: ["Next.js", "Styled-Components", "Typescript"]
+        },
+        {
+            title: "Taxi BN",
+            url: "https://www.taxi-bn.fr",
+            imageUrl: "/images/project/taxi-bn.png",
+            tech: ["Next.js", "Styled-Components", "Typescript"]
+        }
+    ];
+
     return (
         <Section>
-            <Title>Featured Projects</Title>
-            <Description>
-                A selection of my recent work showcasing different technologies
-                and solutions
-            </Description>
+            <Title>Mes projets récents</Title>
+            <ProjectWrapper>
+                {
+                    projectsList.map((project, id) => <ProjectCard key={id} {...project} />)
+                }
+            </ProjectWrapper>
 
             <HeroSphereSystem />
         </Section>
@@ -44,10 +61,22 @@ const Title = styled.h2`
     }
 `;
 
-const Description = styled.p`
-    font-size: 1.1rem;
-    margin-bottom: 32px;
-    text-align: center;
-    color: #a0a0a0;
-    font-weight: 100;
-`;
+// const Description = styled.p`
+//     font-size: 1.1rem;
+//     margin-bottom: 32px;
+//     text-align: center;
+//     color: #a0a0a0;
+//     backdrop-filter: blur(8px);
+//     font-weight: 100;
+// `;
+
+const ProjectWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    
+`

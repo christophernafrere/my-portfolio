@@ -68,6 +68,7 @@ const Section = styled.section`
     width: 100%;
     min-height: 80vh;
     box-sizing: border-box;
+    background-color: white;
 `;
 
 const Title = styled.h2`
