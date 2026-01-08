@@ -22,20 +22,20 @@ function GetInTouch() {
 
             <ContactGrid>
                 <ContactCard>
-                    <IconContainer color="#d1f4ff">
+                    <IconContainer color="#ffe0e0">
                         <MailIcon />
                     </IconContainer>
                     <Label>Email</Label>
-                    <Response href="tel:0658876086">06 58 87 60 86</Response>
+                    <Response href="mailto:nafrere.christopher@gmail.com">
+                        nafrere.christopher@gmail.com
+                    </Response>
                 </ContactCard>
                 <ContactCard>
-                    <IconContainer color="#ffe0e0">
+                    <IconContainer color="#d1f4ff">
                         <PhoneIcon />
                     </IconContainer>
                     <Label>Téléphone</Label>
-                    <Response href="mailto:nafrere.christopher@gmail.com">
-                        06 58 87 60 86
-                    </Response>
+                    <Response href="tel:0658876086">06 58 87 60 86</Response>
                 </ContactCard>
                 <ContactCard>
                     <IconContainer color="#fff4d1">
